@@ -3,10 +3,6 @@
 powerconsumption <- read.table(".\\data\\household_power_consumption.txt", header=TRUE, 
                                sep=";", stringsAsFactors=FALSE, na.strings="?")
 
-powerconsumption$Timestamp = strptime(paste(powerconsumption$Date, 
-                                            powerconsumption$Time), 
-                                      format = "%d/%m/%Y %H:%M:%S")
-
 powerconsumption$Date <- as.Date(powerconsumption$Date, format="%d/%m/%Y")
 powerconsumption <- powerconsumption[(powerconsumption$Date=="2007-02-01" |
                                           powerconsumption$Date=="2007-02-02"),]
