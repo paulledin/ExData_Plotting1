@@ -13,6 +13,6 @@ powerconsumption$Timestamp = strptime(paste(powerconsumption$Date, powerconsumpt
 png(file="plot2.png", width = 480, height = 480)
 
 plot(powerconsumption$Timestamp, powerconsumption$Global_active_power, type="l",
-     ylab = "Global Active Power (kilowatts)", xlab="datetime")
+     ylab = "Global Active Power (kilowatts)", xlab="")
 
 dev.off()
